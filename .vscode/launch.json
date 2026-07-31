@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run realtime prediction",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/phase1_sign_recognition/predict_realtime.py",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Collect dataset samples",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/phase1_sign_recognition/collect_dataset.py",
+      "args": [
+        "--label",
+        "hello",
+        "--samples",
+        "120"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Train classifier",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/phase1_sign_recognition/train_model.py",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Run unittest",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": [
+        "discover",
+        "-s",
+        "${workspaceFolder}/tests",
+        "-v"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

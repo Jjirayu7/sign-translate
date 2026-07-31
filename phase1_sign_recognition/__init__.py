@@ -1,0 +1,1 @@
+"""Phase 1 sign recognition pipeline."""
